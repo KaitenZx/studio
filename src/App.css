@@ -1,0 +1,25 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.infoContainer {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+	.infoContainer {
+		grid-template-columns: 1fr 1fr;
+	}
+}

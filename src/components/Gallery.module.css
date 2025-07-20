@@ -1,0 +1,57 @@
+/* styles for Gallery.tsx */
+
+.galleryContainer {
+	position: relative;
+}
+
+.filters {
+	position: absolute;
+	bottom: 1.5rem;
+	left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	background-color: transparent;
+	padding: 0.5rem;
+	border-radius: 99px;
+	backdrop-filter: blur(10px);
+}
+
+.filters button {
+	background-color: var(--neutral-dark);
+	border: none;
+	border-radius: 99px;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	color: var(--text-secondary);
+	font-size: 14px;
+}
+
+.filters button.active {
+	background-color: var(--accent-secondary);
+	color: var(--accent-primary);
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.5rem;
+}
+
+.galleryItem {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.placeholder {
+	background-color: var(--neutral-light);
+	border-radius: 8px;
+	height: 356px; /* From Figma */
+}
+
+.galleryItem p {
+	margin: 0;
+	color: var(--text-secondary);
+	font-size: 14px;
+}

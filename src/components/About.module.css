@@ -1,0 +1,49 @@
+/* styles for About.tsx */
+
+.about {
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.about h2 {
+	font-size: 2rem;
+	margin: 0;
+	color: var(--accent-pink);
+}
+
+.about p {
+	margin: 0;
+	line-height: 1.6;
+	color: var(--text-secondary);
+}
+
+.about a {
+	color: var(--accent-primary);
+	text-decoration: none;
+}
+
+.buttons {
+	margin-top: 1rem;
+	display: flex;
+	gap: 1rem;
+}
+
+.buttons button {
+	border-radius: 99px;
+	padding: 0.75rem 1.5rem;
+	font-size: 1rem;
+	cursor: pointer;
+	border: none;
+}
+
+.book {
+	background-color: var(--accent-pink);
+	color: white;
+}
+
+.chat {
+	background-color: var(--neutral-light);
+	color: var(--text-primary);
+}
