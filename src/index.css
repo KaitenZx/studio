@@ -15,4 +15,6 @@ body {
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 	background-color: var(--background);
 	color: var(--text-primary);
+	overscroll-behavior-x: contain;
+	overflow-x: hidden;
 }
