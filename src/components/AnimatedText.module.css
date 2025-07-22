@@ -1,0 +1,31 @@
+.item {
+	position: relative;
+	overflow: hidden;
+}
+
+.inline {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.visible {
+}
+
+.letter {
+}
+
+.item.hovered span {
+	pointer-events: none;
+}
+
+.hidden {
+	pointer-events: none;
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+}
+
+.item span {
+	display: inline-block;
+	will-change: transform;
+}

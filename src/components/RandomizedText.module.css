@@ -1,0 +1,14 @@
+/* Styles for RandomizedText.tsx */
+
+.word {
+	display: inline-block;
+}
+
+.letter {
+	display: inline-block;
+	clip-path: polygon(-5% 5%, -5% 114%, 105% 114%, 105% 5%); /* Mask */
+}
+
+.letter > span {
+	display: inline-block;
+}
