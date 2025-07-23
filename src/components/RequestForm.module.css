@@ -1,0 +1,66 @@
+/* Styles for RequestForm.tsx */
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.form h2 {
+	margin: 0;
+	font-size: 1.5rem;
+	color: var(--text-primary);
+}
+
+.formGroup {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.formGroup label {
+	font-weight: 500;
+	color: var(--text-secondary);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+	width: 100%;
+	padding: 0.75rem;
+	border: 1px solid var(--neutral-dark);
+	border-radius: 8px;
+	font-size: 1rem;
+	background-color: var(--neutral-light);
+	color: var(--text-primary);
+	box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+	outline: none;
+	border-color: var(--accent-primary);
+	box-shadow: 0 0 0 2px var(--accent-secondary);
+}
+
+.error {
+	color: var(--accent-pink);
+	font-size: 0.875rem;
+}
+
+.submitButton {
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 99px;
+	background-color: var(--accent-primary);
+	color: white;
+	font-size: 1rem;
+	cursor: pointer;
+	align-self: flex-end;
+	transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+	background-color: #4a00cc; /* A slightly darker shade of accent-primary */
+}
