@@ -1,0 +1,155 @@
+.wrapper {
+	display: flex;
+	overflow: clip;
+	margin-left: -1rem;
+	/* Counteract padding from App.css */
+	margin-right: -1rem;
+	/* Counteract padding from App.css */
+}
+
+.container {
+	width: max-content;
+	white-space: nowrap;
+	display: flex;
+	gap: 15px;
+	padding: 0 1vw 0 0;
+	user-select: none;
+	cursor: grab;
+}
+
+.card {
+	width: 730px;
+	height: 400px;
+	aspect-ratio: 0.9;
+	transform-origin: 50% 100%;
+	position: relative;
+	text-decoration: none;
+	color: inherit;
+	overflow: hidden;
+	border-radius: 8px;
+	border: 1px solid teal;
+	display: grid;
+	grid-template-rows: auto 1fr;
+}
+
+
+
+.cardTitle {
+	margin: 0;
+	font-size: 24px;
+	line-height: 100%;
+	letter-spacing: -0.02em;
+	color: rgba(63, 88, 180, 1);
+}
+
+.media {
+	display: flex;
+	flex-direction: column;
+	padding-top: 38px;
+	align-items: center;
+	gap: 32px;
+	padding-bottom: 24px;
+}
+
+.cardImage {
+	position: relative;
+	width: 520px;
+	height: auto;
+	pointer-events: none;
+	border-radius: 8px;
+}
+
+.description {
+	margin: 0;
+	color: var(--text-secondary);
+	font-size: 14px;
+}
+
+.descriptionLink {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.filters button {
+	background-color: var(--neutral-dark);
+	border: none;
+	border-radius: 99px;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	color: var(--text-secondary);
+	font-size: 14px;
+}
+
+.filters button.active {
+	background-color: var(--accent-secondary);
+	color: var(--accent-primary);
+}
+
+
+.mobileSlideImagesContainer {
+	position: relative;
+	width: 100%;
+	overflow: visible;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: start;
+	justify-items: center;
+	grid-auto-rows: min-content;
+	row-gap: 24px;
+	padding-bottom: 104px;
+
+}
+
+.mobileSlideScreen {
+	position: relative;
+	width: 200px;
+	height: auto;
+	transition: transform 0.3s ease-out;
+	border-radius: 35px;
+	overflow: visible;
+	box-shadow: 0px 12px 16px -12px rgba(0, 0, 0, 0.18),
+		0px 24px 32px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Offset side columns visually by 80px without affecting grid row sizing */
+.mobileSlideImagesContainer>.mobileSlideScreen:nth-child(3n + 1),
+.mobileSlideImagesContainer>.mobileSlideScreen:nth-child(3n + 3) {
+	transform: translateY(80px);
+}
+
+/* Composite two-image slide: fixed container width 694px */
+.compositeContainer {
+	position: relative;
+	width: 694px;
+	height: 557px;
+}
+
+.compositeBase {
+	width: 600px;
+	height: 557px;
+	object-fit: cover;
+	border-radius: 8px;
+	padding-bottom: 89px;
+}
+
+.compositeOverlay {
+	position: absolute;
+	/* place the 160px wide mobile on the right with  - we keep 600+? to fit 694 total */
+	right: 0;
+	bottom: 0;
+	top: 65px;
+	width: 160px;
+	height: 557px;
+	object-fit: cover;
+	border-radius: 16px;
+	box-shadow: 0px 12px 16px -12px rgba(0, 0, 0, 0.18),
+		0px 24px 32px -12px rgba(0, 0, 0, 0.15);
+}

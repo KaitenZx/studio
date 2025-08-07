@@ -1,6 +1,6 @@
 import { FC, useLayoutEffect, useRef, ElementType } from 'react';
 import { gsap } from 'gsap';
-import styles from './RandomizedText.module.css';
+import styles from './index.module.scss';
 
 function wrapTextInSpans(element: HTMLElement) {
 	const text = element.textContent || '';

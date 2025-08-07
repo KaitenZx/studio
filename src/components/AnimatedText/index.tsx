@@ -1,6 +1,6 @@
 import { useRef, useLayoutEffect, FC, ElementType } from 'react';
 import { gsap } from 'gsap';
-import styles from './AnimatedText.module.css';
+import styles from './index.module.scss';
 
 interface AnimatedTextProps {
 	children: string;

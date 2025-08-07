@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import styles from './RequestForm.module.css';
+import styles from './index.module.scss';
 
 type Inputs = {
 	projectType: string;

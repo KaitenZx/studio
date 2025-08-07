@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import styles from './About.module.css';
-import AnimatedText from './AnimatedText';
-import RandomizedText from './RandomizedText';
-import Modal from './Modal';
-import RequestForm from './RequestForm';
+import styles from './index.module.scss';
+import AnimatedText from '../AnimatedText';
+import RandomizedText from '../RandomizedText';
+import Modal from '../Modal';
+import RequestForm from '../RequestForm';
 
 const About = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);

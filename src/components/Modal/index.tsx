@@ -1,7 +1,7 @@
 import { FC, ReactNode, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { gsap } from 'gsap';
-import styles from './Modal.module.css';
+import styles from './index.module.scss';
 
 interface ModalProps {
 	children: ReactNode;

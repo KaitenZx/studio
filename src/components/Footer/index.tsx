@@ -1,5 +1,5 @@
-import styles from './Footer.module.css';
-import AnimatedText from './AnimatedText';
+import styles from './index.module.scss';
+import AnimatedText from '../AnimatedText';
 
 const Footer = () => {
 	return (
