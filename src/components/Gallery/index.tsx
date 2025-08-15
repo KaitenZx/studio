@@ -65,7 +65,7 @@ const allGalleryItems: GalleryItem[] = [
 	{ id: 11, title: 'Wedding', description: 'wedding', link: '/project/11', category: 'Presentations', image: wedding },
 ];
 
-const filters = ['All', 'Apps', 'Cases', 'Sites', 'Presentations', 'Shaders', 'Art'];
+const filters = ['All', 'Apps', 'Cases', 'Sites', 'Presentations', 'Art'];
 
 const Gallery = () => {
 	const [activeFilter, setActiveFilter] = useState(filters[0]);
