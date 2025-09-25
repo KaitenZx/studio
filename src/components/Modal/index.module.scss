@@ -5,12 +5,15 @@
 	inset: 0;
 	background-color: rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px); /* For Safari */
+	-webkit-backdrop-filter: blur(10px);
+	/* For Safari */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	z-index: 1000;
 }
+
+//
 
 .modal {
 	background-color: var(--background);
