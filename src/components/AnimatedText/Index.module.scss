@@ -3,16 +3,13 @@
 	overflow: hidden;
 }
 
+//
 .inline {
 	display: inline-block;
 	vertical-align: bottom;
 }
 
-.visible {
-}
 
-.letter {
-}
 
 .item.hovered span {
 	pointer-events: none;

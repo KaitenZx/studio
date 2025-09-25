@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { Observer } from 'gsap/Observer';
-import styles from './Index.module.scss';
+import styles from './index.module.scss';
 import {
 	RevivalSite,
 	RevivalInterface,
