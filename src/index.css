@@ -14,7 +14,7 @@
 body {
 	margin: 0;
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-	background-color: var(--background);
+	background-color: transparent;
 	color: var(--text-primary);
 	overscroll-behavior-x: contain;
 	overflow-x: hidden;

@@ -2,6 +2,17 @@ import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { Observer } from 'gsap/Observer';
 import styles from './Index.module.scss';
+import {
+	RevivalSite,
+	RevivalInterface,
+	RevivalMobile,
+	BackofficeInterface,
+	AidSite,
+	AidCase,
+	PezSite,
+	Krays,
+	Wedding
+} from './CardBackgrounds';
 
 import aidCase from '../../assets/screens/aid_case.webp';
 import aidSite from '../../assets/screens/aid_site.webp';
@@ -66,6 +77,22 @@ const allGalleryItems: GalleryItem[] = [
 ];
 
 const filters = ['All', 'Apps', 'Cases', 'Sites', 'Presentations', 'Art'];
+
+// Функция для получения фонового компонента по ID карточки
+const getBackgroundComponent = (id: number) => {
+	switch (id) {
+		case 1: return RevivalSite;
+		case 2: return RevivalMobile;
+		case 3: return Krays;
+		case 4: return BackofficeInterface;
+		case 6: return AidSite;
+		case 7: return PezSite;
+		case 8: return AidCase;
+		case 10: return RevivalInterface;
+		case 11: return Wedding;
+		default: return null;
+	}
+};
 
 const Gallery = () => {
 	const [activeFilter, setActiveFilter] = useState(filters[0]);
@@ -224,45 +251,50 @@ const Gallery = () => {
 		<section ref={wrapperRef}>
 			<div className={styles.wrapper}>
 				<div className={styles.container} ref={containerRef}>
-					{[...displayedItems, ...displayedItems].map((item, index) => (
-						<div
-							key={`${item.id}-${index}`}
-							className={styles.card}
-						>
-							<div className={styles.media}>
-								<div className={styles.mediaHeader}>
-									<h3 className={styles.cardTitle}>{item.title}</h3>
-								</div>
-								{'composite' in item ? (
-									<div className={styles.compositeContainer}>
-										<img
-											src={item.composite.base}
-											alt={`${item.title} base`}
-											className={styles.compositeBase}
-										/>
-										<img
-											src={item.composite.overlay}
-											alt={`${item.title} overlay`}
-											className={styles.compositeOverlay}
-										/>
+					{[...displayedItems, ...displayedItems].map((item, index) => {
+						const BackgroundComponent = getBackgroundComponent(item.id);
+
+						return (
+							<div
+								key={`${item.id}-${index}`}
+								className={styles.card}
+							>
+								{BackgroundComponent && <BackgroundComponent />}
+								<div className={styles.media}>
+									<div className={styles.mediaHeader}>
+										<h3 className={styles.cardTitle}>{item.title}</h3>
 									</div>
-								) : 'images' in item ? (
-									<div className={styles.mobileSlideImagesContainer}>
-										{item.images.map((src, i) => (
+									{'composite' in item ? (
+										<div className={styles.compositeContainer}>
 											<img
-												key={src}
-												src={src}
-												alt={`App screen ${i + 1}`}
-												className={styles.mobileSlideScreen}
+												src={item.composite.base}
+												alt={`${item.title} base`}
+												className={styles.compositeBase}
 											/>
-										))}
-									</div>
-								) : (
-									<img src={item.image} alt={item.description} className={styles.cardImage} />
-								)}
+											<img
+												src={item.composite.overlay}
+												alt={`${item.title} overlay`}
+												className={styles.compositeOverlay}
+											/>
+										</div>
+									) : 'images' in item ? (
+										<div className={styles.mobileSlideImagesContainer}>
+											{item.images.map((src, i) => (
+												<img
+													key={src}
+													src={src}
+													alt={`App screen ${i + 1}`}
+													className={styles.mobileSlideScreen}
+												/>
+											))}
+										</div>
+									) : (
+										<img src={item.image} alt={item.description} className={styles.cardImage} />
+									)}
+								</div>
 							</div>
-						</div>
-					))}
+						);
+					})}
 				</div>
 			</div>
 			<div className={styles.filters}>
